@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+
+  
+  <test thread-count="5" name="Test">
+  
+  		<groups>
+  			<run>
+  				<include name="smoke"/> 
+  				<include name="sanity"/>
+  			</run>
+  		</groups>	
+  
+    <classes>
+      <class name="testClasses.LoginTest"/>
+	  <class name="testClasses.RegisterPatientTest"/>
+	  <class name="testClasses.AppointmentsTest"/>
+	  <class name="testClasses.AddPatVitalsTest"/>
+	  <class name="testClasses.AddConditionsTest"/>	
+	  <class name="testClasses.EndVisitTest"/>
+	  <class name="testClasses.ExtentReport"/>	    
+    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
