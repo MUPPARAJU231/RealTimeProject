@@ -32,13 +32,7 @@ public class BaseClass
 		}
 		if(browserName.equalsIgnoreCase("edge"))
 		{
-                            EdgeOptions options = new EdgeOptions();
-                            options.addArguments("--headless=new");
-                            options.addArguments("--disable-gpu");
-                            options.addArguments("--remote-debugging-port=9222");
-                            // Avoid using --no-sandbox on Windows unless absolutely necessary
-			
-			driver=new EdgeDriver(options);
+                 	driver=new EdgeDriver();
 			driver.get(FetchDataFromProperty.readDataFromPropery().getProperty("URL"));
 			driver.manage().window().maximize();
 			addImpicitWait();
