@@ -89,6 +89,12 @@
 <artifactId>extentreports-cucumber7-adapter</artifactId>
 <version>1.14.0</version>
 </dependency>
+
+    <dependency>
+    <groupId>net.masterthought</groupId>
+    <artifactId>cucumber-reporting</artifactId>
+    <version>5.7.5</version>
+    </dependency>
     
   </dependencies>
 
@@ -141,7 +147,7 @@
       <version>3.0.0</version>
       <configuration>
         <includes>
-          <include>**/TestRun.java</include> <!-- Make sure this matches your actual class -->
+          <include>**/TestRunner_02.java</include> <!-- Make sure this matches your actual class -->
         </includes>
       </configuration>
     </plugin>
