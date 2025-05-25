@@ -98,8 +98,7 @@
 			<version>2.20.0</version>
 		</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -120,18 +119,19 @@
 
 	</dependencies>
 
-	<build>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven
-			defaults (may be moved to parent pom) -->
+	<!--
+		<build>
+		<pluginManagement> lock down plugins versions to avoid using Maven
+			defaults (may be moved to parent pom) 
 			<plugins>
-				<!-- clean lifecycle, see
-				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+				 clean lifecycle, see
+				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle 
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.1.0</version>
 				</plugin>
-				<!-- default lifecycle, jar packaging: see
-				https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+				 default lifecycle, jar packaging: see
+				https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging 
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
@@ -140,10 +140,10 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
 				</plugin>
-				<!--<plugin>
+				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.22.1</version>
-				</plugin>-->
+				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.0.2</version>
@@ -156,8 +156,8 @@
 					<artifactId>maven-deploy-plugin</artifactId>
 					<version>2.8.2</version>
 				</plugin>
-				<!-- site lifecycle, see
-				https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+				 site lifecycle, see
+				https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle 
 				<plugin>
 					<artifactId>maven-site-plugin</artifactId>
 					<version>3.7.1</version>
@@ -173,8 +173,8 @@
 					<version>3.0.0</version>
 					<configuration>
 						<includes>
-							<include>**/TestRunner_02.java</include> <!-- Make
-							sure this matches your actual class -->
+							<include>**/TestRunner_02.java</include>  Make
+							sure this matches your actual class 
 						</includes>
 					</configuration>
 				</plugin>
@@ -182,4 +182,22 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+-->
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<includes>
+						<include>**/TestRunner_02.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
 </project>
