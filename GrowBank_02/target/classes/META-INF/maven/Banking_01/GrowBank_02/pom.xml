@@ -14,8 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -89,6 +89,31 @@
 <artifactId>extentreports-cucumber7-adapter</artifactId>
 <version>1.14.0</version>
 </dependency>
+
+    	<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.20.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+	<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.20.0</version>
+	</dependency>
+
+    <dependency>
+      	<groupId>io.cucumber</groupId>
+	      <artifactId>cucumber-html</artifactId>
+       	<version>0.2.7</version>
+     </dependency>
+    
+    <dependency>
+    <groupId>net.masterthought</groupId>
+    <artifactId>cucumber-reporting</artifactId>
+    <version>5.7.5</version>
+    </dependency>
     
   </dependencies>
 
@@ -134,6 +159,18 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+
+ <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0</version>
+      <configuration>
+        <includes>
+          <include>**/TestRunner_02.java</include> <!-- Make sure this matches your actual class -->
+        </includes>
+      </configuration>
+    </plugin>
+        
       </plugins>
     </pluginManagement>
   </build>
