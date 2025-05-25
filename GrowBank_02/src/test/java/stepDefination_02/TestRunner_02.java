@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 		glue= {"stepDefination_02"},
 		dryRun=false,
 		monochrome=false,
-		plugin= {"pretty","html:target/HtmlReport/index.html",
-				  "json:target/cucumberReport/cucumber.json",
+		plugin= {"pretty","html:target/HtmlReport/cucumberReport.html",
+				  "json:target/cucumber.json",
 			 
 			"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 		}
